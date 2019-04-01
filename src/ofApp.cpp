@@ -2,7 +2,8 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-
+    ofSetWindowShape(600, 600);
+    ofSetWindowPosition(10, 10);
 }
 
 //--------------------------------------------------------------
@@ -17,10 +18,10 @@ void ofApp::draw(){
     float margin = 150;
     float angle = ofGetElapsedTimef();
     float amp = ofMap(sin(angle*0.5), -1, 1, 0, 1);
-
-    float xOrig = 400;
-    float yOrig = 400;
     float radius = 200;
+
+    float xOrig = 270;
+    float yOrig = 270;
     ofSetColor(204, 231, 227);
 
     for(int i = 0; i < 16; i++){
@@ -37,9 +38,8 @@ void ofApp::draw(){
         triangle.draw();
     }
 
-    xOrig = 200;
-    yOrig = 600;
-    radius = 200;
+    xOrig = 120;
+    yOrig = 115;
     ofSetColor(204, 231, 227);
 
     for(int i = 0; i < 16; i++){
@@ -56,9 +56,8 @@ void ofApp::draw(){
         triangle.draw();
     }
 
-    xOrig = 570;
-    yOrig = 300;
-    radius = 200;
+    xOrig = 460;
+    yOrig = 360;
     ofSetColor(199, 196, 222);
 
     for(int i = 0; i < 16; i++){
@@ -75,9 +74,8 @@ void ofApp::draw(){
         triangle.draw();
     }
 
-    xOrig = 230;
-    yOrig = 150;
-    radius = 200;
+    xOrig = 430;
+    yOrig = 110;
     ofSetColor(143, 108, 159);
 
     for(int i = 0; i < 16; i++){
@@ -94,9 +92,8 @@ void ofApp::draw(){
         triangle.draw();
     }
 
-    xOrig = 450;
-    yOrig = 650;
-    radius = 200;
+    xOrig = 190;
+    yOrig = 480;
     ofSetColor(143, 108, 159);
 
     for(int i = 0; i < 16; i++){
@@ -112,10 +109,6 @@ void ofApp::draw(){
         triangle.close();
         triangle.draw();
     }
-
-//    float xCircle = ofMap(sin(angle*3)*amp, -1, 1, 0, ofGetWidth());
-//    ofDrawCircle(xCircle, 400, 10);
-
 }
 
 //--------------------------------------------------------------
