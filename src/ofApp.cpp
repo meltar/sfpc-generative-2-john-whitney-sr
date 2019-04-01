@@ -93,7 +93,7 @@ void ofApp::draw(){
     }
 
     xOrig = 190;
-    yOrig = 480;
+    yOrig = 490;
     ofSetColor(143, 108, 159);
 
     for(int i = 0; i < 16; i++){
