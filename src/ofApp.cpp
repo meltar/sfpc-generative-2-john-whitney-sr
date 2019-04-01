@@ -15,32 +15,33 @@ void ofApp::draw(){
     ofBackground(38, 28, 29);
     ofNoFill();
 
+    float margin = 150;
     float xOrig = 400;
     float yOrig = 400;
     float radius = 200;
     float angle = ofGetElapsedTimef();
 
-    float x = xOrig + radius * cos(angle*1);
-    float y = yOrig + radius * sin(angle*1.7);
-
     ofSetColor(158, 166, 81);
 
-    for(int i = 0; i < 12; i++){
-        float x = ofMap(sin(angle*(i*0.1)), -1, 1, 0, ofGetWidth());
+    for(int i = 0; i < 16; i++){
+        float x = xOrig + radius * cos(angle*2 - i * 50);
+        float y = yOrig + radius * sin(angle*1.7 - i * 50);
         ofPolyline triangle;
-        triangle.addVertex(x,y+60);
-        triangle.addVertex(x-60,y-60);
-        triangle.addVertex(x+60,y-60);
+        float size = 65-(i*4);
+        float x1 = x+i;
+        float y1 = y+i;
+        triangle.addVertex(x1,y1+size);
+        triangle.addVertex(x1-size,y1-size);
+        triangle.addVertex(x1+size,y1-size);
         triangle.close();
         triangle.draw();
     }
 
-    ofSetColor(97, 113, 108);
 
-    for (int i = 0; i < 12; i++){
-        float x = ofMap(sin(angle*(i*0.1)), -1, 1, 0, ofGetWidth());
-        ofDrawCircle(x,i*20,10);
-    }
+//    float amp = ofMap(sin(angle*3.7), -1, 1, 0, 1);
+//    x = ofMap(sin(angle*3)*amp, -1, 1, 0, ofGetWidth());
+//    ofDrawCircle(x, 400, 10);
+
 }
 
 //--------------------------------------------------------------
