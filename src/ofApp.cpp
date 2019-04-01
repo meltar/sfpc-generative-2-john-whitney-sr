@@ -15,6 +15,7 @@ void ofApp::update(){
 void ofApp::draw(){
     ofBackground(53, 52, 57);
 //    ofNoFill();
+//    add post effect shaders?
     float margin = 150;
     float angle = ofGetElapsedTimef();
     float amp = ofMap(sin(angle*0.5), -1, 1, 0, 1);
@@ -25,8 +26,8 @@ void ofApp::draw(){
     ofSetColor(204, 231, 227);
 
     for(int i = 0; i < 16; i++){
-        float x = xOrig + radius*amp * cos(angle*2 - i * 50);
-        float y = yOrig + radius*amp * sin(angle*1.7 - i * 50);
+        float x = xOrig + radius*amp * cos(angle*2 + i * 50);
+        float y = yOrig + radius*amp * sin(angle*1.7 + i * 50);
         ofPolyline triangle;
         float size = 100-(i*6);
         float x1 = x+i;
@@ -43,8 +44,8 @@ void ofApp::draw(){
     ofSetColor(204, 231, 227);
 
     for(int i = 0; i < 16; i++){
-        float x = xOrig + radius*amp * cos(angle*0.3 - i * 50);
-        float y = yOrig + radius*amp * sin(angle*1.2 - i * 50);
+        float x = xOrig + radius*amp * cos(angle*0.3 + i * 50);
+        float y = yOrig + radius*amp * sin(angle*1.2 + i * 50);
         ofPolyline triangle;
         float size = 100-(i*6);
         float x1 = x+i;
@@ -61,8 +62,8 @@ void ofApp::draw(){
     ofSetColor(199, 196, 222);
 
     for(int i = 0; i < 16; i++){
-        float x = xOrig + radius*amp * cos(angle*1.4 - i * 50);
-        float y = yOrig + radius*amp * sin(angle*1 - i * 50);
+        float x = xOrig + radius*amp * cos(angle*1.4 + i * 50);
+        float y = yOrig + radius*amp * sin(angle*1 + i * 50);
         ofPolyline triangle;
         float size = 100-(i*6);
         float x1 = x+i;
@@ -79,8 +80,8 @@ void ofApp::draw(){
     ofSetColor(143, 108, 159);
 
     for(int i = 0; i < 16; i++){
-        float x = xOrig + radius*amp * cos(angle*2.2 - i * 50);
-        float y = yOrig + radius*amp * sin(angle*0.2 - i * 50);
+        float x = xOrig + radius*amp * cos(angle*2.2 + i * 50);
+        float y = yOrig + radius*amp * sin(angle*0.2 + i * 50);
         ofPolyline triangle;
         float size = 100-(i*6);
         float x1 = x+i;
@@ -97,8 +98,8 @@ void ofApp::draw(){
     ofSetColor(143, 108, 159);
 
     for(int i = 0; i < 16; i++){
-        float x = xOrig + radius*amp * cos(angle*0.5 - i * 50);
-        float y = yOrig + radius*amp * sin(angle*0.5 - i * 50);
+        float x = xOrig + radius*amp * cos(angle*0.5 + i * 50);
+        float y = yOrig + radius*amp * sin(angle*0.5 + i * 50);
         ofPolyline triangle;
         float size = 100-(i*6);
         float x1 = x+i;
